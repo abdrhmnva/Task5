@@ -1,7 +1,7 @@
-##Project Overview
+## Project Overview
 The store offers different types of electronic devices: Smartphones, Laptops, and Tablets. Each device has unique attributes but shares common attributes like name, price, and stock. Customers can view available devices, add them to their cart, apply discounts, and proceed to checkout.
 
-##Classes and Methods
+## Classes and Methods
 1. Device (Base Class)
 Attributes:
 
@@ -59,7 +59,7 @@ remove_device(self, device, amount): Removes a specified quantity of a device fr
 get_total_price(self): Returns the total price of all items in the cart.
 print_items(self): Prints all devices in the cart with their quantities and total price.
 checkout(self): Checks the availability of all items in the cart, reduces stock for purchased devices, and prints a receipt.
-##How to Run the Code
+## How to Run the Code
 Prerequisites:
 Python 3.x
 A text editor or IDE (e.g., PyCharm, VS Code)
@@ -73,11 +73,11 @@ Copy
 $ python main.py
 This will start the interactive menu where you can view available devices, add them to your cart, and proceed with checkout.
 
-##UML Class Diagram
+## UML Class Diagram
 Below is the UML Class Diagram for the shopping cart system.
 
 
-##Sample Input/Output
+## Sample Input/Output
 Sample Run:
 text
 Copy
