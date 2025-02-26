@@ -1,0 +1,54 @@
+@startuml
+
+class Device {
+    - name: str
+    - price: float
+    - stock: int
+    - warranty: int
+    + display_info(): void
+    + __str__(): str
+    + apply_discount(discount_percentage: float): void
+    + is_available(amount: int): bool
+    + reduce_stock(amount: int): void
+}
+
+class Smartphone {
+    - screen_size: float
+    - battery_life: float
+    + make_call(): void
+    + install_app(): void
+    + __str__(): str
+}
+
+class Laptop {
+    - ram_size: int
+    - processor_speed: float
+    + run_program(program_name: str): void
+    + use_keyboard(): void
+    + __str__(): str
+}
+
+class Tablet {
+    - screen_resolution: str
+    - weight: float
+    + browse_internet(): void
+    + use_touchscreen(): void
+    + __str__(): str
+}
+
+class Cart {
+    - items: list of tuples (device, quantity)
+    - total_price: float
+    + add_device(device: Device, amount: int): void
+    + remove_device(device: Device, amount: int): void
+    + get_total_price(): float
+    + print_items(): void
+    + checkout(): void
+}
+
+Device <|-- Smartphone
+Device <|-- Laptop
+Device <|-- Tablet
+Cart --> Device : manages
+
+@enduml
